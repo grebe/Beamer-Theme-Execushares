@@ -11,7 +11,7 @@
 \definecolor{ExecusharesRed}{RGB}{230,37,52}
 \definecolor{ExecusharesBlack}{RGB}{43,40,40}
 \definecolor{ExecusharesBlue}{RGB}{22,190,207}
-\definecolor{ExecusharesWhite}{RGB}{255,255,243}
+\definecolor{ExecusharesWhite}{RGB}{255,255,245}
 \definecolor{ExecusharesGrey}{RGB}{107,110,108}
 
 % use Adobe's Source Pro fonts:
@@ -44,9 +44,9 @@
 % make the subitems also pixelated >, but a little smaller and red
 \setbeamertemplate{itemize subitem}{
 	\tikz{
-		\draw[fill=ExecusharesRed,draw=none] (0, 0) rectangle(0.075, 0.075);
-		\draw[fill=ExecusharesRed,draw=none] (0.075, 0.075) rectangle(0.15, 0.15);
-		\draw[fill=ExecusharesRed,draw=none] (0, 0.15) rectangle(0.075, 0.225);
+		\draw[fill=ExecusharesBlue,draw=none] (0, 0) rectangle(0.075, 0.075);
+		\draw[fill=ExecusharesBlue,draw=none] (0.075, 0.075) rectangle(0.15, 0.15);
+		\draw[fill=ExecusharesBlue,draw=none] (0, 0.15) rectangle(0.075, 0.225);
 	}
 }
 
@@ -109,7 +109,7 @@
 		\ifnum\thepage=1\relax
 			% the title page
 			% draw the fills
-			\fill[color=ExecusharesRed] (0, 4cm) rectangle(12.8cm, 9.6cm);
+			\fill[color=ExecusharesBlue] (0, 4cm) rectangle(12.8cm, 9.6cm);
 
 			% draw the actual text
 			\node[anchor=south,text width=11.8cm,inner xsep=0.5cm] at (6.4cm,4cm) {\color{ExecusharesWhite}\Huge\textbf{\inserttitle}};
@@ -122,7 +122,7 @@
 		\else
 			% NOT the title page
 			% title bar
-			\fill[color=ExecusharesRed] (0, 8.6cm) rectangle(12.8cm,9.6cm);
+			\fill[color=ExecusharesBlue] (0, 8.6cm) rectangle(12.8cm,9.6cm);
 
 			% swap the comment on these to add section titles to slide titles
 			%\node[anchor=north,text width=11.8cm,inner xsep=0.5cm,inner ysep=0.25cm] at (6.4cm,9.6cm) {\color{ExecusharesWhite}\Large\textbf{\insertsectionhead: \insertframetitle}};
@@ -133,7 +133,7 @@
 			\ifnum \value{showProgressBar}>0\relax%
 				% the the progress bar icon in the middle of the screen
 				\draw[fill=ExecusharesGrey,draw=none] (0cm,0cm) rectangle(12.8cm,0.25cm);
-				\draw[fill=ExecusharesRed,draw=none] (0cm,0cm) rectangle(\progressbar@tmpdim,0.25cm);
+				\draw[fill=ExecusharesBlue,draw=none] (0cm,0cm) rectangle(\progressbar@tmpdim,0.25cm);
 
 				% bottom information
 				\node[anchor=south west] at(0cm,0.25cm) {\color{ExecusharesGrey}\tiny\insertsection};
@@ -177,7 +177,7 @@
 		% set up the entire slide as the canvas
 		\useasboundingbox (0,0) rectangle(\the\paperwidth,\the\paperheight);
 		\fill[color=ExecusharesWhite] (-1cm, 1cm) rectangle(11.8cm, 9.8cm);
-		\fill[color=ExecusharesRed] (-1cm, 3.9cm) rectangle(11.8cm, 5.9cm);
+		\fill[color=ExecusharesBlue] (-1cm, 3.9cm) rectangle(11.8cm, 5.9cm);
 		\node[text width=11.8cm,align=center] at (5.4cm, 4.9cm) {\color{ExecusharesWhite}\Huge\textbf{\insertsection}};
 	\end{tikzpicture}
 }
